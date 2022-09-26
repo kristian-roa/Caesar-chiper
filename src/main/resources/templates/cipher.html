@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Caesar cipher with Spring Boot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Caesar cipher</h1>
+<form action="#" th:action="@{/cipher}" th:object="${cipher}" method="post">
+    <p>Text: <input type="text" th:field="*{text}"/></p>
+    <p>Shift: <input type="number" th:field="*{shift}"/></p>
+    <p>Revert: <input type="checkbox" th:field="*{revert}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>
